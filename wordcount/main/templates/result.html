@@ -1,0 +1,17 @@
+<body>
+  <h1>결과</h1>
+  {% for word,value in words %}
+    <a href="https://ko.dict.naver.com/#/search?query={{word}}">
+    <p>단어: {{word}}: 갯수:{{value}}</p>
+
+    </a>
+    <br />
+  {% endfor %}
+
+  <a href={% url 'main' %}>메인페이지로</a>
+</body>
+<style>
+  body{
+    text-align: center;
+  }
+</style>
